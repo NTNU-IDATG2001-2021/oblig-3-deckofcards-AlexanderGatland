@@ -14,4 +14,7 @@ public class Hand {
         this.hand.add(pc);
     }
 
+    public ArrayList<PlayingCard> getHand() {
+        return hand;
+    }
 }
