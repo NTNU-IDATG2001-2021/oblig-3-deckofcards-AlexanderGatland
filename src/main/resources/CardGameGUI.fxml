@@ -8,8 +8,9 @@
       <HBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Button onAction="#dealHand" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Deal Hand" />
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Check Hand" />
-            <Label prefHeight="50.0" prefWidth="300.0" text="Label" />
+            <Button onAction="#checkHand" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Check Hand" />
+            <Label prefHeight="50.0" prefWidth="150.0" text="Label" />
+            <Label fx:id="handSum" prefHeight="50.0" prefWidth="150.0" text="Hand sum: " />
          </children>
       </HBox>
    </bottom>

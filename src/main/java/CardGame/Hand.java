@@ -14,6 +14,12 @@ public class Hand {
         this.hand.add(pc);
     }
 
+    public int handSum() {
+        int sum = 0;
+        sum = this.hand.stream().map((card -> card.getFace())).reduce(0, Integer::sum);
+        return sum;
+    }
+
     public ArrayList<PlayingCard> getHand() {
         return hand;
     }
