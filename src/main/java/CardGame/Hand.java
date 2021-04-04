@@ -1,6 +1,8 @@
 package CardGame;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Hand {
 
@@ -15,9 +17,14 @@ public class Hand {
     }
 
     public int handSum() {
-        int sum = 0;
-        sum = this.hand.stream().map((card -> card.getFace())).reduce(0, Integer::sum);
+        Integer sum = this.hand.stream().map((card -> card.getFace())).reduce(0, Integer::sum);
         return sum;
+    }
+
+    public String heartsInHand() {
+        List hearts = this.hand.stream().filter(playingCard -> playingCard.getSuit() == 'H')
+                .map(playingCard -> playingCard.getAsString()).collect(Collectors.toList());
+        return hearts.toString();
     }
 
     public ArrayList<PlayingCard> getHand() {

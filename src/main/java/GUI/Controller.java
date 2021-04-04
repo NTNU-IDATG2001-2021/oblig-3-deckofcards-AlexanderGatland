@@ -19,11 +19,19 @@ public class Controller {
     public Label handSum;
 
     @FXML
+    public Label heartsInHand;
+
+    @FXML
     public void checkHand(ActionEvent actionEvent) {
         try {
             handSum.setText("Hand sum: " + this.hand.handSum());
         } catch (NullPointerException npe) {
             handSum.setText("Hand sum: 0");
+        }
+        try {
+            heartsInHand.setText("Hearts: " + this.hand.heartsInHand());
+        } catch (NullPointerException npe) {
+            heartsInHand.setText("No hearts");
         }
     }
 
@@ -41,7 +49,6 @@ public class Controller {
             label.setPrefHeight(300);
             label.setPrefWidth(600/n);
             hBox.getChildren().add(label);
-            System.out.println(hand.getHand().get(i).getAsString());
         }
     }
 }

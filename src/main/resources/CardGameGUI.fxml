@@ -9,7 +9,7 @@
          <children>
             <Button onAction="#dealHand" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Deal Hand" />
             <Button onAction="#checkHand" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Check Hand" />
-            <Label prefHeight="50.0" prefWidth="150.0" text="Label" />
+            <Label fx:id="heartsInHand" prefHeight="50.0" prefWidth="150.0" text="Hearts: " />
             <Label fx:id="handSum" prefHeight="50.0" prefWidth="150.0" text="Hand sum: " />
          </children>
       </HBox>
