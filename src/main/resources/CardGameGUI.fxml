@@ -9,8 +9,14 @@
          <children>
             <Button onAction="#dealHand" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Deal Hand" />
             <Button onAction="#checkHand" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Check Hand" />
-            <Label fx:id="heartsInHand" prefHeight="50.0" prefWidth="150.0" text="Hearts: " />
-            <Label fx:id="handSum" prefHeight="50.0" prefWidth="150.0" text="Hand sum: " />
+            <VBox prefHeight="50.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <Label fx:id="heartsInHand" prefHeight="25.0" prefWidth="150.0" text="Hearts: " />
+               <Label fx:id="queenOfSpades" prefHeight="25.0" prefWidth="150.0" text="Queen Of Spades: " />
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <Label prefHeight="25.0" prefWidth="150.0" text="5-flush: " />
+               <Label fx:id="handSum" prefHeight="25.0" prefWidth="150.0" text="Hand sum: " />
+            </VBox>
          </children>
       </HBox>
    </bottom>

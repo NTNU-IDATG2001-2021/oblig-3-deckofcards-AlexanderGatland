@@ -22,9 +22,23 @@ public class Hand {
     }
 
     public String heartsInHand() {
+        String heartsList = "No hearts";
         List hearts = this.hand.stream().filter(playingCard -> playingCard.getSuit() == 'H')
                 .map(playingCard -> playingCard.getAsString()).collect(Collectors.toList());
-        return hearts.toString();
+        if (!hearts.isEmpty()) {
+            heartsList = hearts.toString();
+        }
+        return heartsList;
+    }
+
+    public boolean queenOfSpades() {
+        boolean check = false;
+        if(this.hand.stream()
+                .filter(playingCard -> playingCard.getSuit() == 'S' && playingCard.getFace() == 12)
+                .findAny().isPresent()) {
+            check =true;
+        }
+        return check;
     }
 
     public ArrayList<PlayingCard> getHand() {
