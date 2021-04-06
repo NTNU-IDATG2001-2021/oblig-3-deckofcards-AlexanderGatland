@@ -9,8 +9,16 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 
+/**
+ * The type Card game gui.
+ */
 public class CardGameGUI extends Application {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         Application.launch(args);
     }

@@ -14,7 +14,7 @@
                <Label fx:id="queenOfSpades" prefHeight="25.0" prefWidth="150.0" text="Queen Of Spades: " />
             </VBox>
             <VBox prefHeight="50.0" prefWidth="150.0" BorderPane.alignment="CENTER">
-               <Label prefHeight="25.0" prefWidth="150.0" text="5-flush: " />
+               <Label fx:id="flush" prefHeight="25.0" prefWidth="150.0" text="5-flush: " />
                <Label fx:id="handSum" prefHeight="25.0" prefWidth="150.0" text="Hand sum: " />
             </VBox>
          </children>
@@ -23,7 +23,7 @@
    <center>
    </center>
    <top>
-      <HBox fx:id="hBox" prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="handBox" prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="300.0" prefWidth="120.0" text="No cards yet "/>
          </children>

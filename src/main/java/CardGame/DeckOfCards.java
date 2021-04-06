@@ -3,10 +3,16 @@ package CardGame;
 import java.util.Collections;
 import java.util.ArrayList;
 
+/**
+ * The type Deck of cards.
+ */
 public class DeckOfCards {
     private final char[] suit = { 'S', 'H', 'D', 'C' };
     private ArrayList<PlayingCard> DeckOfCards;
 
+    /**
+     * Instantiates a new Deck of cards.
+     */
     public DeckOfCards() {
         DeckOfCards = new ArrayList<>();
 
@@ -18,10 +24,21 @@ public class DeckOfCards {
         Collections.shuffle(DeckOfCards);
     }
 
+    /**
+     * Gets deck of cards.
+     *
+     * @return the deck of cards
+     */
     public ArrayList<PlayingCard> getDeckOfCards() {
         return this.DeckOfCards;
     }
 
+    /**
+     * Deal hand method.
+     *
+     * @param n the number of cards
+     * @return the hand of cards
+     */
     public Hand dealHand(int n) {
         Hand hand = new Hand();
         for(int i = 0; i<n; i++) {
@@ -29,11 +46,6 @@ public class DeckOfCards {
             this.DeckOfCards.remove(0);
         }
         return hand;
-    }
-
-    public static void main(String[] args) {
-        CardGame.DeckOfCards deckOfCards = new DeckOfCards();
-        System.out.println(deckOfCards.getDeckOfCards().get(12).getAsString());
     }
 
 }
